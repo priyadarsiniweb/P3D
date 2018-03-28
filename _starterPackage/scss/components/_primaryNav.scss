@@ -1,0 +1,300 @@
+/*--------------------------------------
+Global Styles for Primary Menu
+--------------------------------------*/
+
+.noScroll {
+  height: 100%;
+  overflow: auto;
+}
+
+/* Add transition to containers so they can push in and out. */
+
+#wrapper {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+nav, #overlay, #toggleMenuContainer, nav#primary {
+  @include kreeTransition();
+}
+
+#overlay {
+    opacity: 0;
+    visibility: hidden;  
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100vw; height: 100%;
+    position: fixed;
+    top: 0; right: 0;
+    margin: auto;
+    z-index: 99;
+}
+
+/*--------------------------------------
+Primary Nav
+--------------------------------------*/
+
+nav#primary {
+
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+
+    @include grid-md {
+
+        opacity: 1;
+        visibility: visible;
+        text-align: center;
+        display: block;
+        z-index:1000;
+        height: 115px;
+        padding-top: 12px;
+        
+        ///////////////////////////////////////////////////
+        // Comment the 2 lines below to make standard nav (non-fixed)
+        ///////////////////////////////////////////////////
+
+        position: fixed;
+        top: 0;
+        width: 100%;
+
+        ///////////////////////////////////////////////////
+
+        &.sticky {
+          position: fixed;
+          //background-color: rgba(0,0,0,0.8);
+          top: 0;
+          width: 100%;
+          //height: 150px;
+          box-shadow: 0px 30px 60px -45px #000000, -1px 0 0 rgba(0,0,0,.1);
+          -webkit-overflow-scrolling: touch;
+        }        
+
+    }
+
+
+}
+
+
+/*--------------------------------------
+Main Navigation w/ Mobile Support
+--------------------------------------*/
+
+
+#main-nav   {
+  height: 30px; /* set to the height you want your menu to be */
+  margin: 0 0 10px; /* just to give some spacing */
+
+  ul    {
+      margin: 0; padding: 0; /* only needed if you have not done a CSS reset */
+      float: none;
+
+      @include grid-md {
+        float: right; //added to move menu to right
+        margin: 32px 0 0 0;
+      }
+
+      /* this targets all sub menus */
+      ul {
+          display: none;
+          position: relative; //show sub menus for mobile
+
+          @include grid-md {
+            display: none; /* hide all sub menus from view */
+            position: absolute;
+            top: -2px; /* this should be the same height as the top level menu -- height + padding + borders */
+          }
+
+          li { /* this targets all submenu items */
+              float: none; /* overwriting our float up above */
+              text-align: center;
+
+              @include grid-md {
+                text-align: left;
+                padding-left: 4px;
+                width: 210px; /* set to the width you want your sub menus to be. This needs to match the value we set below */
+              }
+
+              a { /* target all sub menu item links */
+                  padding: 5px 10px; /* give our sub menu links a nice button feel */
+              }
+
+          }
+
+      }
+
+  }
+
+  li    {
+      display: block;
+      float: none;
+      height: auto;
+      margin: 0; padding: 0; /* only needed if you don't have a reset */
+      position: relative; /* this is needed in order to position sub menus */
+
+      @include grid-md {
+        float: left;
+        line-height: 30px; /* this should be the same as your #main-nav height */
+        height: 30px; /* this should be the same as your #main-nav height */
+      }
+
+      a  {
+          display: block;
+          height: 30px;
+          line-height: 30px;
+          padding: 0 15px;
+          font-size: 0.9em;
+          color: #fff;
+      }
+
+  }
+
+}
+
+//FOR ACTIVE PAGE
+#main-nav .current-menu-item a, #main-nav .current_page_item a {
+    color: #fff;
+    background: #000;
+}
+
+// menu hover
+#main-nav a:hover {
+    color: #fff;
+    background: red;
+}
+
+/* show sub menus when hovering over a parent */
+#main-nav ul li:hover > ul {
+    display: block; 
+}
+
+/* target all second, third, and deeper level sub menus */
+#main-nav ul ul li ul {
+    left: 150px; /* this needs to match the sub menu width set above -- width + padding + borders */
+    top: 0; /* this ensures the sub menu starts in line with its parent item */
+}
+
+/*--------------------------------------
+Mobile Menu Toggle
+--------------------------------------*/
+
+#toggleMenuContainer {
+    z-index: 100;
+    position: fixed;
+    top: 15px; right: 15px;
+    background-color: rgba(255,255,255,0.8);
+    @include grid-md {
+        display: none;
+    }
+}
+
+.toggle-nav{
+  width: 55px;
+  height: 55px;
+  display: block;
+
+    @include grid-sm {
+        top: 6px;        
+    }  
+  
+  &:after,
+  &:before {
+    content: "";
+  }
+  
+  span,
+  &::after,
+  &::before {
+    backface-visibility: hidden;
+    position: absolute;
+    left: 13px;
+    right: 13px;
+    border-top: 4px solid $primary-color;
+    transition: .2s;
+    border-radius: 6px;
+  }
+  
+  &::before {
+    top: 18px;
+  }
+
+  span {
+    top: 26px;
+  }
+
+  &::after {
+    top: 34px;
+  }
+
+  &.active {
+    &::before,
+    &::after {
+      top: 25px;
+      backface-visibility: hidden;
+      transition: .3s;
+      border-top-color: #fff;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    span {
+      opacity: 0;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/*--------------------------------------
+Active Menu Wrapper
+--------------------------------------*/
+body.menu-active {
+
+    #overlay {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    #toggleMenuContainer {
+        background-color: transparent;
+    }
+
+    nav#primary {
+        opacity: 1;
+        visibility: visible;
+        overflow-x: hidden;
+        overflow-y: auto;
+        display: block;
+        margin: 30px 0 0 0; //added top margin to avoid overlapping with close button
+        z-index: 99999;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 100vh;
+        height: 90vh;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+    }
+}
+
+/*--------------------------------------
+WP Menu Classes - remove is not needed
+--------------------------------------*/
+
+.current_page_item{} // Class for Current Page
+.current-cat{} // Class for Current Category
+.current-menu-item{} // Class for any other current Menu Item
+.menu-item-type-taxonomy{} // Class for a Category
+.menu-item-type-post_type{} // Class for Pages
+.menu-item-type-custom{} // Class for any custom item that you added
+.menu-item-home{} // Class for the Home Link

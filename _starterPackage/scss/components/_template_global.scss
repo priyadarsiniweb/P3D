@@ -1,0 +1,97 @@
+/* html,
+body {
+    height: 100%;
+} */
+
+
+/*--------------------------------------
+Body
+--------------------------------------*/
+html, body {
+    margin:0; padding:0; border:0;
+}
+
+html{
+    position: relative;
+    min-height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+a {
+    text-decoration: none;
+    color: $link-color;
+    outline: 0;
+    border: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    border: 0;
+    height: auto;
+}
+
+ul {
+    //padding:0;margin:0;
+    &.inline li {
+        display: inline-block;
+        list-style: none;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+ul.inline, ol.inline {
+  margin-left: 0;
+  list-style: none;
+}
+nav ul, nav ol {
+  list-style: none;
+}
+
+/*--------------------------------------
+Global Styles
+--------------------------------------*/
+
+main{
+
+}
+
+
+
+/*--------------------------------------
+Header
+--------------------------------------*/
+header{
+    text-align: center;
+    background-color: #444;
+    color: #fff;
+    height:100vh;
+    background-image:url(https://chrisaam.files.wordpress.com/2015/03/wallpaper-2846361.jpg);
+    background-size:cover;
+    position:relative;
+}
+
+/*--------------------------------------
+Footer
+--------------------------------------*/
+
+footer {
+
+}
