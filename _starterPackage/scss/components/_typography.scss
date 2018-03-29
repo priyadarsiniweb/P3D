@@ -1,15 +1,15 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|Open+Sans:400,800,300,600,700,700italic|Oswald:400,700,300|Roboto:400,300,400italic,500,700,900);
+@import url(http://fonts.googleapis.com/css?family=Poppins+Slab:400,700,300|Open+Sans:400,800,300,600,700,700italic|Oswald:400,700,300|Roboto:400,300,400italic,500,700,900);
 /////////////////////////////////////////////////////////////////////////////
 // FONTS
 /////////////////////////////////////////////////////////////////////////////
 
 //$font-family-header: 'Oswald', sans-serif;
-$font-family-header: 'Roboto Slab', serif;
-$font-family-body: 'Roboto', sans-serif;
+$font-family-header: 'Poppins Slab', serif;
+$font-family-body: 'Poppins', sans-serif;
 //$font-family-body: 'Open Sans', sans-serif;
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Poppins, Arial, sans-serif !default;
 $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif !default;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace !default;
 

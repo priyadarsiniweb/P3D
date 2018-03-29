@@ -9,30 +9,33 @@
   <meta name="description" content="" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
-  <link rel='stylesheet' id='core-css' href='css/styles.css?v=1.0' media='all' />
+  <link rel='stylesheet' id='core-css' href='css/styles.css' media='all' />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <div class="login">
 		<div class="container-login">
-			
 			<div class="wrap-login">
+				
 				<form class="login-form validate-form">
-					<span class="login-form-title p-b-59">
+					<div class="w-100 d-block d-sm-none">
+						<img src="/_starterPackage/images/patient3d-logo.png" alt="Patient 3D" class="float-right"/>
+					</div>
+					<span class="login-form-title mb-4">
 						Sign Up
-						<p>Thank you for showing interest in Patient3D the population health and point of calre patient management solution</p>
+						<p class="mt-2">Thank you for showing interest in Patient3D the population health and point of calre patient management solution</p>
 					</span>
 
 					<div class="d-flex w-100">
 						<div class="wrap-input validate-input col mr-5" data-validate="Name is required">
 							<span class="label-input">First Name</span>
-							<input class="input" type="text" name="firstname" placeholder="First Name...">
+							<input class="input" type="text" name="firstname">
 							<span class="focus-input"></span>
 						</div>
 						<div class="wrap-input validate-input col" data-validate="Name is required">
 							<span class="label-input">Last Name</span>
-							<input class="input" type="text" name="lastname" placeholder="Last Name...">
+							<input class="input" type="text" name="lastname">
 							<span class="focus-input"></span>
 						</div>
 					</div>
@@ -40,12 +43,12 @@
 					<div class="d-flex w-100">
 						<div class="wrap-input validate-input col mr-5" data-validate="Your NPI is required">
 							<span class="label-input">NPI</span>
-							<input class="input" type="text" name="npi" placeholder="NPI...">
+							<input class="input" type="text" name="npi">
 							<span class="focus-input"></span>
 						</div>
 						<div class="wrap-input validate-input col" data-validate="DOB is required">
 							<span class="label-input">DOB</span>
-							<input class="input" type="text" name="dob" placeholder="DOB..." id="date">
+							<input class="input" type="text" name="dob" id="date">
 							<span class="focus-input"></span>
 						</div>
 					</div>
@@ -53,55 +56,44 @@
 
 					<div class="wrap-input validate-input" data-validate="Valid email is required: ex@abc.xyz">
 						<span class="label-input">Email</span>
-						<input class="input" type="text" name="email" placeholder="Email addess...">
+						<input class="input" type="text" name="email">
 						<span class="focus-input"></span>
 					</div>
 
 					<div class="wrap-input validate-input" data-validate="Password is required">
 						<span class="label-input">Password</span>
-						<input class="input" type="text" name="pass" placeholder="*************">
+						<input class="input" type="password" name="pass">
 						<span class="focus-input"></span>
 					</div>
 
 					<div class="wrap-input validate-input" data-validate="Repeat Password is required">
 						<span class="label-input">Repeat Password</span>
-						<input class="input" type="text" name="repeat-pass" placeholder="*************">
+						<input class="input" type="password" name="repeat-pass">
 						<span class="focus-input"></span>
-					</div>
-
-					<div class="flex-m w-full p-b-33">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox" for="ckb1">
-								<span class="txt1">
-									I agree to the
-									<a href="https://colorlib.com/etc/lf/Login_v13/index.html#" class="txt2 hov1">
-										Terms of User
-									</a>
-								</span>
-							</label>
-						</div>
-
 					</div>
 
 					<div class="container-login-form-btn">
 
-						<a href="https://colorlib.com/etc/lf/Login_v13/index.html#" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+						<a href="#" class="dis-block txt3 hov1">
 							Already Sign Up?
-							<i class="fa fa-long-arrow-right m-l-5"></i>
 						</a>
 
 						<div class="wrap-login-form-btn">
 							<div class="login-form-bgbtn"></div>
 							<button class="login-form-btn">
-								Sign Up
+								Sign Up 
+								<i class="fa fa-long-arrow-right ml-2"></i>
 							</button>
 						</div>
 					</div>
 				</form>
 			</div>
 
-			<div class="login-more d-xs-none" style="background-image: url(&#39;https://chrisaam.files.wordpress.com/2015/03/wallpaper-2846361.jpg&#39;);"></div>
+			<div class="login-more d-xs-none">
+				<div class="w-100 p-4 d-none d-sm-block">
+					<img src="/_starterPackage/images/patient3d-logo.png" alt="Patient 3D" class="float-right"/>
+				</div>
+			</div>
 		</div>
 	</div>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>

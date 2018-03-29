@@ -12,15 +12,15 @@
   
   body, html {
       height: 100%;
-      font-family: 'Roboto', sans-serif, sans-serif;
+      font-family: 'Poppins', sans-serif, sans-serif;
   }
   
   /*---------------------------------------------*/
   a {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 14px;
       line-height: 1.7;
-      color: #666666;
+      color: #1570a5;
       margin: 0px;
       transition: all 0.4s;
       -webkit-transition: all 0.4s;
@@ -42,10 +42,10 @@
   }
   
   p {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 14px;
       line-height: 1.7;
-      color: #666666;
+      color: #3c434a;
       margin: 0px;
   }
   
@@ -120,23 +120,23 @@
   /*//////////////////////////////////////////////////////////////////
   [ Utility ]*/
   .txt1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
     color: #999999;
     line-height: 1.4;
   }
   
   .txt2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
-    color: #666666;
+    color: #3c434a;
     line-height: 1.4;
   }
   
   .txt3 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    color: #666666;
+    color: #1570a5;
     line-height: 1.4;
   }
   
@@ -178,6 +178,7 @@
   /*------------------------------------------------------------------
   [ login more ]*/
   .login-more {
+    background-image: url('../images/signup-banner.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -205,9 +206,9 @@
   .login-form-title {
     display: block;
     width: 100%;
-    font-family: Poppins-Bold;
+    font-family: Poppins;
     font-size: 39px;
-    color: #333333;
+    color: #3c434a;
     line-height: 1.2;
     text-align: left;
   }
@@ -222,22 +223,24 @@
     position: relative;
     border-bottom: 2px solid #dbdbdb;
     margin-bottom: 45px;
+    padding: 0;
   }
   
   .label-input {
-    font-family: Poppins-SemiBold;
-    font-size: 18px;
-    color: #999999;
+    font-family: Poppins;
+    font-size: 12px;
+    color: #91a8b0;
     line-height: 1.2;
     padding-left: 2px;
+    text-transform: uppercase;
   }
   
   .input {
     display: block;
     width: 100%;
-    height: 50px;
+    height: 40px;
     background: transparent;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 22px;
     color: #555555;
     line-height: 1.2;
@@ -258,21 +261,21 @@
     content: "";
     display: block;
     position: absolute;
-    bottom: -2px;
+    bottom: -1px;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 1px;
   
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s;
   
-    background: #d5007d;
-    background: -webkit-linear-gradient(45deg, #d5007d, #e53935);
-    background: -o-linear-gradient(45deg, #d5007d, #e53935);
-    background: -moz-linear-gradient(45deg, #d5007d, #e53935);
-    background: linear-gradient(45deg, #d5007d, #e53935);
+    background: #91a8b0;
+    background: -webkit-linear-gradient(45deg, #91a8b0, #91a8b0);
+    background: -o-linear-gradient(45deg, #91a8b0, #91a8b0);
+    background: -moz-linear-gradient(45deg, #91a8b0, #91a8b0);
+    background: linear-gradient(45deg, #91a8b0, #91a8b0);
   }
   
   
@@ -381,10 +384,10 @@
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    min-width: 244px;
+    min-width: 144px;
     height: 50px;
   
-    font-family: Poppins-Medium;
+    font-family: Poppins;
     font-size: 16px;
     color: #fff;
     line-height: 1.2;
@@ -492,7 +495,10 @@
       padding-left: 15px;
       padding-right: 15px;
       width: 100%;
-      background-image: url('https://chrisaam.files.wordpress.com/2015/03/wallpaper-2846361.jpg');
+      background-image: url('../images/signup-banner.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
       position: relative;
       z-index: 1;
     }
@@ -510,7 +516,7 @@
         background: -o-linear-gradient(bottom, #fff, #fff);
         background: -moz-linear-gradient(bottom, #fff, #fff);
         background: linear-gradient(bottom, #fff, #fff);
-        opacity: 0.8;
-        z-index: 1;
+        opacity: 0.9;
+        z-index: -1;
       }
   }
